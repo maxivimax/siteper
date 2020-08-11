@@ -1,0 +1,49 @@
+<html lang="ru_RU">
+<script type="text/javascript">
+  function baclk(){
+    var a = '<input type="text5" name="text5" id="text5" placeholder="Введите текст или ссылку..." value="" style="color: black"> <a class="buttonns" onclick="qrgen(text5, sect)">Создать</a>'
+    document.getElementById("sect").innerHTML= a;
+  }
+</script>
+
+<script type="text/javascript">
+  function qrgen(inptut, sect){
+    var text1 = "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=";
+    var inptu = inptut.value;
+    var qr = text1 + inptu;
+    // alert(inptu);
+    // alert(qr);
+    // alert(sect);
+
+    document.getElementById("sect").innerHTML="<img src='" + qr + "'>" + "<a class='" + "buttonns" + "' onclick='" + "javascript: baclk();'" + ">Назад</a>";
+    return qr;
+  }
+</script>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Ну не знаю</title>
+  <link rel="shortcut icon" href="https://vk.com/images/favicon_vk_2x.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">
+  <link rel="stylesheet" type="text/css" href="style.css" media="screen">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./style.css"> </head>
+
+<body>
+  <section class="page-header">
+    <h1 class="project-name">Перенос сайтов</h1>
+    <h1></h1>
+    <div id="sect">
+      <input type="text5" name="text5" id="text5" placeholder="Введите текст или ссылку..." value="" style="color: black">
+      <a class="buttonns" onclick="qrgen(text5, sect)">Создать</a>
+    </div>
+  </section>
+
+  <section class="main-content">
+    <div class="container-lg px-3 my-5 markdown-body">
+    </div>
+  </section>
+
+</body>
+
+</html>"https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=tet"
